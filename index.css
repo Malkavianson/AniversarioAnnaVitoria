@@ -54,7 +54,7 @@ body {
 .invitation-hero {
   padding: 2.5rem 1.5rem;
   text-align: center;
-  margin-top: 10rem
+  margin-top: 10rem;
 }
 
 .invitation-hero__title {
@@ -143,9 +143,9 @@ body {
 }
 
 .invitation-glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
 
   border-radius: 22px;
   padding: 1.5rem;
@@ -238,6 +238,24 @@ body {
   text-align: center;
 }
 
+.invitation-section--map {
+  overflow: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.35s ease;
+
+  opacity: 0;
+  transform: translateY(12px);
+  max-height: 0;
+}
+
+.invitation-section--map.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+}
+
 .invitation-map-toggle-button {
   aspect-ratio: 1;
   width: 25vw;
@@ -251,16 +269,34 @@ body {
 
   padding: 1rem 1.25rem;
 
-  background-color: var(--color-secondary);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
   color: #fff;
 
   border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
 
   font-size: 1.1rem;
   font-weight: 600;
 
   cursor: pointer;
+}
+
+.invitation-map-toggle-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .invitation-map-toggle-button__icon {
@@ -286,4 +322,27 @@ body {
   .invitation-hero__subtitle {
     font-size: 1.4rem;
   }
+}
+
+.invitation-section--details {
+  margin: 1.5rem 1rem;
+  padding: 1.5rem;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.2)
+    );
+
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }

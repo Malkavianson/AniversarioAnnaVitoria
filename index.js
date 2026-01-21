@@ -39,3 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const toggleButton = document.getElementById("toggleMapButton");
+const mapSection = document.getElementById("invitationMapSection");
+
+toggleButton.addEventListener("click", () => {
+  const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+
+  toggleButton.setAttribute("aria-expanded", String(!isExpanded));
+  mapSection.classList.toggle("is-visible");
+});
