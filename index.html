@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aniversário da Anna Vitória | 4 anos</title>
+
+    <meta
+      name="description"
+      content="Convite de aniversário da Anna Vitória. Tema Pequena Sereia. Data, horário e local do evento."
+    />
+
+    <meta name="author" content="Malkavianson" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />  
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body class="invitation-app">
+    <!-- Background visual -->
+    <div class="invitation-background-overlay"></div>
+
+    <!-- Conteúdo -->
+    <header class="invitation-header">
+      <section class="invitation-hero">
+        <h1 class="invitation-hero__title">Anna Vitória</h1>
+
+        <p class="invitation-hero__subtitle">4 anos 🧜‍♀️✨</p>
+      </section>
+    </header>
+
+    <main class="invitation-main-content">
+      <!-- Mensagem -->
+      <section class="invitation-section invitation-section--message">
+          <p class="invitation-text invitation-text--highlight">
+            Vai ter festa no fundo do mar.</br>
+            E o reino de Atlântica espera por você!</br></br>
+            Venha comemorar comigo.
+        </p>
+      </section>
+
+      <!-- Informações -->
+      <section class="invitation-section invitation-section--details">
+        <div class="invitation-glass-card">
+          <h2
+            class="invitation-section__title invitation-section__title--glass"
+          >
+            Detalhes da Festa
+          </h2>
+
+          <div class="invitation-details-grid">
+            <!-- Coluna 1 -->
+            <div class="invitation-details-column">
+              <div class="invitation-detail-item">
+                <span class="invitation-detail-item__icon">🎂</span>
+                <span class="invitation-detail-item__label"
+                  >Aniversariante</span
+                >
+                <span class="invitation-detail-item__value">Anna Vitória</span>
+              </div>
+
+              <div class="invitation-detail-item">
+                <span class="invitation-detail-item__icon">🎈</span>
+                <span class="invitation-detail-item__label">Idade</span>
+                <span class="invitation-detail-item__value">4 anos</span>
+              </div>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="invitation-details-column">
+              <div class="invitation-detail-item">
+                <span class="invitation-detail-item__icon">📅</span>
+                <span class="invitation-detail-item__label">Data</span>
+                <span class="invitation-detail-item__value">07/02/2026</span>
+              </div>
+
+              <div class="invitation-detail-item">
+                <span class="invitation-detail-item__icon">⏰</span>
+                <span class="invitation-detail-item__label">Horário</span>
+                <span class="invitation-detail-item__value">20:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Local (linha inteira, mais importante) -->
+          <div class="invitation-detail-location">
+            <span class="invitation-detail-item__icon">📍</span>
+            <div class="invitation-detail-location__text">
+              <strong>Local</strong>
+              <p>
+                R. Camila de Souza Machado, 301<br />
+                Nossa Senhora Aparecida<br />
+                Belo Horizonte – MG
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="invitation-section invitation-section--map-trigger">
+        <h2 class="invitation-section__title">Como Chegar</h2>
+        <button
+          class="invitation-map-toggle-button"
+          id="toggleMapButton"
+          title="map"
+          type="button"
+          aria-expanded="false"
+          aria-controls="invitationMapSection"
+        >
+          <span class="invitation-map-toggle-button__icon"></span>
+        </button>
+      </section>
+      <section
+        class="invitation-section invitation-section--map invitation-section--hidden"
+        id="invitationMapSection"
+      >
+        <div class="invitation-map-container">
+          <iframe
+            class="invitation-map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15013.482974963676!2d-43.96770400045838!3d-19.82425999678551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68fd8d43e2675%3A0x4c2e01988ef31eed!2sR.%20Camila%20de%20Souza%20Machado%2C%20301!5e0!3m2!1spt-BR!2sbr!4v1768866877399!5m2!1spt-BR!2sbr"
+            loading="lazy"
+            title="gmaps"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          class="invitation-map-button"
+          href="https://maps.app.goo.gl/bfkvPsdY4hYCrfia9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Abrir no Google Maps
+        </a>
+      </section>
+    </main>
+
+    <footer class="invitation-footer">
+      <p class="invitation-footer__text">
+        Criado com ❤️ por
+        <a
+          href="https://github.com/malkavianson"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Malkavianson
+        </a>
+      </p>
+    </footer>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
