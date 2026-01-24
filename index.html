@@ -54,7 +54,11 @@
       href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap">
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+    />
 
     <link rel="icon" href="./assets/favicon/favicon.ico" />
     <link
@@ -81,6 +85,31 @@
   <body class="invitation-app">
     <!-- Background visual -->
     <div class="invitation-background-overlay"></div>
+
+    <div class="invitation-opening" id="invitationOpening">
+      <div class="invitation-opening__scene">
+        <!-- Cartão -->
+        <div
+          class="invitation-opening__card"
+          id="openInvitationButton"
+          aria-label="Abrir convite de aniversário"
+        >
+          <span class="invitation-opening__card-text">
+            VOCÊ RECEBEU UM CONVITE MUITO ESPECIAL
+          </span>
+        </div>
+
+        <!-- Animais / cenário -->
+        <img
+          src="assets/images/sebastian.png"
+          alt=""
+          class="invitation-opening__character invitation-opening__character--crab"
+          aria-hidden="true"
+        />
+      </div>
+    </div>
+
+    <div class="invitation-bubbles-layer" aria-hidden="true"></div>
 
     <header class="invitation-header">
       <section class="invitation-hero">
@@ -157,6 +186,7 @@
         </div>
       </section>
 
+      <!-- Mapa -->
       <section class="invitation-section invitation-section--map-trigger">
         <h2 class="invitation-section__title">Como Chegar</h2>
         <button
@@ -171,7 +201,7 @@
         </button>
       </section>
       <section
-        class="invitation-section invitation-section--map invitation-section--hidden"
+        class="invitation-section invitation-section--map"
         id="invitationMapSection"
       >
         <div class="invitation-map-container">
