@@ -16,10 +16,10 @@
 html,
 body {
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 body.invitation-app {
-  min-height: calc(var(--vh) * 100);
   font-family:
     "Ranchers",
     system-ui,
@@ -352,7 +352,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 10;
-  min-height: calc(var(--vh) * 100);
+  height: calc(var(--vh) * 100);
 
   display: flex;
   align-items: center;
@@ -532,10 +532,4 @@ body {
   .invitation-opening__card-text {
     animation: none;
   }
-}
-
-.invitation-bubbles-layer,
-.invitation-opening,
-.invitation-opening__scene {
-  height: calc(var(--vh) * 100);
 }
