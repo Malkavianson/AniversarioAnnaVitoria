@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const opening = document.getElementById("invitationOpening");
   const openButton = document.getElementById("openInvitationButton");
 
+  function setVH() {
+    document.documentElement.style.setProperty(
+      "--vh",
+      `${window.innerHeight * 0.01}px`,
+    );
+  }
+
+  setVH();
+  window.addEventListener("resize", setVH);
+
   if (!toggleMapButton || !mapSection) return;
 
   toggleMapButton.addEventListener("click", () => {
@@ -34,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 900); // tempo da animação futura
   });
 
-    const layer = document.querySelector(".invitation-bubbles-layer");
+  const layer = document.querySelector(".invitation-bubbles-layer");
   if (!layer) return;
 
   const MAX_BUBBLES = 100;
@@ -74,10 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     bubble.style.setProperty("--drift", `${drift}px`);
     bubble.style.setProperty("--scale-start", scaleStart);
-    bubble.style.setProperty(
-      "--scale-mid",
-      (scaleStart + scaleEnd) / 2
-    );
+    bubble.style.setProperty("--scale-mid", (scaleStart + scaleEnd) / 2);
     bubble.style.setProperty("--scale-end", scaleEnd);
 
     layer.appendChild(bubble);
@@ -117,5 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
       createStar();
     }
   }, 100);
-
 });
