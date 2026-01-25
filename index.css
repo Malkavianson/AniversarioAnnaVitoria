@@ -13,10 +13,9 @@
   --color-card-bg: rgba(255, 255, 255, 0.9);
 }
 
-html,
-body {
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
+body.invitation-locked {
+  overflow: hidden;
+  /* height: 100vh; */
 }
 
 body.invitation-app {
@@ -51,12 +50,21 @@ body {
 }
 
 .invitation-header,
-.invitation-main-content,
-.invitation-footer {
+.invitation-main-content {
   position: relative;
   z-index: 1;
 }
 
+.invitation-footer {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .invitation-hero {
   padding: 2.5rem 1.5rem;
   text-align: center;
@@ -111,7 +119,7 @@ body {
 
 .invitation-map-container {
   border-radius: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 1rem;
 }
 
@@ -420,7 +428,6 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 1s;
   animation-direction: alternate;
-
 }
 
 .invitation-opening__foreground {
@@ -446,7 +453,7 @@ body {
   inset: 0;
   z-index: 1; /* abaixo do conteúdo */
   pointer-events: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .bubble {
@@ -532,4 +539,26 @@ body {
   .invitation-opening__card-text {
     animation: none;
   }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.invitation-opening {
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.invitation-main-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.invitation--opened .invitation-main-content {
+  opacity: 1;
+  pointer-events: auto;
 }

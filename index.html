@@ -46,6 +46,9 @@
       content="https://malkavianson.github.io/AniversarioAnnaVitoria/assets/images/og-background.jpg"
     />
 
+    <meta property="og:site_name" content="Aniversário da Anna Vitória" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="author" content="Malkavianson" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,7 +85,7 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body class="invitation-app">
+  <body class="invitation-app invitation-locked">
     <!-- Background visual -->
     <div class="invitation-background-overlay"></div>
 
@@ -229,6 +232,13 @@
         </a>
       </p>
     </footer>
+
+    <audio
+      id="bgMusic"
+      src="./assets/song/littlemermaid.mp3"
+      preload="auto"
+      loop
+    ></audio>
 
     <script src="./index.js" defer></script>
   </body>
